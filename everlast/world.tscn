@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cn3aex7bghecj"]
 
 [ext_resource type="Texture2D" uid="uid://bvtten61pdhsu" path="res://assets/Ground-SS.png" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://wd4ruwff5ysa" path="res://antigravity.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://bah7i1ommxn2o" path="res://antigravity.tscn" id="2_fj7yv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fj7yv"]
 texture = ExtResource("1_f3sb7")
@@ -32,7 +32,7 @@ tile_map_data = PackedByteArray("AAAGAO7/AAAAAAEAAAAGAO//AAAAAAEAAAAGAPD/AAAAAAE
 tile_set = SubResource("TileSet_ipd6p")
 
 [node name="antigravity" parent="." unique_id=1721212661 instance=ExtResource("2_fj7yv")]
-position = Vector2(243, 193)
+position = Vector2(268, 158)
 
-[node name="Camera2D" type="Camera2D" parent="antigravity" unique_id=540474401]
+[node name="Camera2D" type="Camera2D" parent="antigravity" unique_id=775533824]
 zoom = Vector2(2, 2)

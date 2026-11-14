@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://wd4ruwff5ysa"]
+[gd_scene format=3 uid="uid://bah7i1ommxn2o"]
 
 [ext_resource type="Texture2D" uid="uid://boiycjkml6uat" path="res://assets/placeholderss.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://c7hjlllhqdx78" path="res://antigravity.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://ddfd2ewo7boy4" path="res://antigravity.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(8, 8)
