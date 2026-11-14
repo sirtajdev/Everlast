@@ -5,6 +5,6 @@ extends Button
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://world.tscn")
+	get_tree().change_scene_to_file("res://level2.tscn")
 	print("done")
 	pass # Replace with function body.

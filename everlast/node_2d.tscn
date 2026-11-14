@@ -70,6 +70,7 @@ scale = Vector2(1.9799999, 1.9453125)
 texture = ExtResource("2_0hol4")
 
 [node name="title-ground" parent="." unique_id=1550567018 instance=ExtResource("3_kdubu")]
+position = Vector2(0, 1)
 
 [node name="title" type="TileMapLayer" parent="." unique_id=1219060027]
 position = Vector2(0, 6)

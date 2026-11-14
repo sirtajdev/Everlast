@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://kbdwg3p20sst" path="res://2.png" id="5_rmy57"]
 [ext_resource type="Texture2D" uid="uid://cicalqonx0sgq" path="res://3.png" id="6_qulpo"]
 [ext_resource type="Texture2D" uid="uid://mpghvvrjd0b5" path="res://4.png" id="7_jifot"]
-[ext_resource type="Script" uid="uid://2qlvq5v8k1ta" path="res://trampoline.gd" id="9_qulpo"]
+[ext_resource type="PackedScene" uid="uid://cw17pwt0gral4" path="res://killzone.tscn" id="10_3opl0"]
+[ext_resource type="AudioStream" uid="uid://fq4hllabdgjf" path="res://assets/Everlast Level Theme.wav" id="10_jifot"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8tcn8"]
 texture = ExtResource("1_r40rm")
@@ -57,8 +58,7 @@ texture = ExtResource("2_8tcn8")
 [sub_resource type="TileSet" id="TileSet_qd1ji"]
 sources/1 = SubResource("TileSetAtlasSource_r6vdu")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_28217"]
-size = Vector2(14659, 1759.5)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7rdrt"]
 
 [node name="Node2D" type="Node2D" unique_id=1668333357]
 position = Vector2(307, 162)
@@ -114,11 +114,15 @@ position = Vector2(-233, 227)
 position = Vector2(0.5, 0.125)
 zoom = Vector2(0.8, 0.8)
 
-[node name="Trampoline" type="Area2D" parent="." unique_id=1375048720]
-position = Vector2(376, 556)
-script = ExtResource("9_qulpo")
+[node name="AudioStreamer2D" type="AudioStreamPlayer2D" parent="." unique_id=1751032255]
+stream = ExtResource("10_jifot")
+autoplay = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trampoline" unique_id=1604301728]
-position = Vector2(7113.5, 1538.75)
-shape = SubResource("RectangleShape2D_28217")
-script = ExtResource("9_qulpo")
+[node name="Killzone" parent="." unique_id=2141632229 instance=ExtResource("10_3opl0")]
+position = Vector2(-102, -6)
+script = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1228054782]
+position = Vector2(7775, 985)
+scale = Vector2(100, 100)
+shape = SubResource("WorldBoundaryShape2D_7rdrt")
