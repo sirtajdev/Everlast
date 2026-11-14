@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ca8xlmj8ojmkn"]
+
+[node name="raycast" type="RayCast2D" unique_id=1972076186]
+target_position = Vector2(0, 25)
+collision_mask = 2
