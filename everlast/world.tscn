@@ -44,9 +44,6 @@ sources/0 = SubResource("TileSetAtlasSource_fj7yv")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7rdrt"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_74thi"]
-radius = 29.068884
-
 [node name="World" type="Node2D" unique_id=724613949]
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=1093770460]
@@ -76,10 +73,3 @@ collision_mask = 2
 position = Vector2(250, 524)
 scale = Vector2(8, 8)
 shape = SubResource("WorldBoundaryShape2D_7rdrt")
-
-[node name="Killzone" parent="." unique_id=2141632229 instance=ExtResource("4_aqk2v")]
-position = Vector2(520, 258)
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=492783838]
-shape = SubResource("CircleShape2D_74thi")
