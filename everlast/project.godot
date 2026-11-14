@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Everlast"
-run/main_scene="uid://cn3aex7bghecj"
+run/main_scene="uid://dohhw6qpheq3n"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
