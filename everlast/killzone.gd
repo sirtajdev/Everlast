@@ -5,7 +5,10 @@ extends Area2D
 
 func _on_body_entered(body):
 	print("You Died!")
+	body.get_node("CollisionShape2D").queue_free()
+	body.alive=false
 	timer.start()
 
 func _on_timer_timeout():
 	get_tree().reload_current_scene()
+	
