@@ -37,14 +37,14 @@ offset_right = 1145.0
 offset_bottom = 649.0
 
 [node name="NewGameButton" type="Button" parent="." unique_id=590495053]
-offset_left = 508.0
-offset_top = 246.0
-offset_right = 753.0
-offset_bottom = 317.0
+offset_left = 438.0
+offset_top = 170.0
+offset_right = 766.0
+offset_bottom = 241.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_epypp")
 theme_override_font_sizes/font_size = 48
-text = "New Game"
+text = "- Start Demo -"
 flat = true
 icon_alignment = 1
 script = ExtResource("3_d21ai")
@@ -67,10 +67,10 @@ tile_map_data = PackedByteArray("AAAGAP//AAAAAAEAAAAGAP7/AAAAAAEAAAAGAP3/AAAAAAE
 tile_set = SubResource("TileSet_4d7sh")
 
 [node name="StatusLabel" type="Label" parent="." unique_id=626906701]
-offset_left = 9.0
-offset_top = 143.0
-offset_right = 745.0
-offset_bottom = 275.0
+offset_left = 564.0
+offset_top = 501.0
+offset_right = 578.0
+offset_bottom = 620.0
 theme_override_colors/font_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
 theme_override_font_sizes/font_size = 87
 
