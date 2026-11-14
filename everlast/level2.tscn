@@ -121,3 +121,4 @@ script = ExtResource("9_qulpo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trampoline" unique_id=1604301728]
 position = Vector2(7113.5, 1538.75)
 shape = SubResource("RectangleShape2D_28217")
+script = ExtResource("9_qulpo")
