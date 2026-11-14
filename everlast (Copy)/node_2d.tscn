@@ -1,0 +1,103 @@
+[gd_scene format=4 uid="uid://dohhw6qpheq3n"]
+
+[ext_resource type="FontFile" uid="uid://y0i8gymjcori" path="res://Lora/static/Lora-Italic.ttf" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://db55tbvcrx0ps" path="res://Everlast-Photoroom.svg" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://ctiubspvfbvvv" path="res://new_game_button.gd" id="3_d21ai"]
+[ext_resource type="PackedScene" uid="uid://d0gax1jr0mxwf" path="res://title_ground.tscn" id="3_kdubu"]
+[ext_resource type="Texture2D" uid="uid://247gx85nbpde" path="res://Ground-SS.png" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://qy1srycklei2" path="res://1.png" id="5_d21ai"]
+[ext_resource type="AudioStream" uid="uid://dt34nhw8g7yoo" path="res://1368476_Upbeats.mp3" id="7_d21ai"]
+[ext_resource type="Texture2D" uid="uid://cicalqonx0sgq" path="res://3.png" id="8_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://mpghvvrjd0b5" path="res://4.png" id="9_hqns4"]
+[ext_resource type="Texture2D" uid="uid://kbdwg3p20sst" path="res://2.png" id="10_x0ka3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rj586"]
+texture = ExtResource("3_q6r6c")
+texture_region_size = Vector2i(8, 8)
+0:0/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4d7sh"]
+tile_size = Vector2i(8, 8)
+sources/0 = SubResource("TileSetAtlasSource_rj586")
+
+[node name="Node2D" type="Node2D" unique_id=834380886]
+
+[node name="1" type="Sprite2D" parent="." unique_id=815984462]
+show_behind_parent = true
+position = Vector2(577, 323.5)
+scale = Vector2(1.9965278, 1.9598765)
+texture = ExtResource("5_d21ai")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=921842687]
+offset_left = -15.0
+offset_top = -4.0
+offset_right = 1131.0
+offset_bottom = 644.0
+
+[node name="NewGameButton" type="Button" parent="." unique_id=590495053]
+offset_left = 475.0
+offset_top = 181.0
+offset_right = 720.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_epypp")
+theme_override_font_sizes/font_size = 48
+text = "Start Demo"
+flat = true
+icon_alignment = 1
+script = ExtResource("3_d21ai")
+
+[node name="LoadGameButton" type="Button" parent="." unique_id=435040961]
+offset_left = 833.0
+offset_top = 166.0
+offset_right = 1164.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(0.072842844, 0.072842546, 0.072842605, 1)
+theme_override_fonts/font = ExtResource("1_epypp")
+theme_override_font_sizes/font_size = 48
+flat = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=628299196]
+position = Vector2(574, 325)
+
+[node name="EverlastPhotoroom2" type="Sprite2D" parent="." unique_id=1142903737]
+position = Vector2(585.5, 97.5)
+scale = Vector2(1.9799999, 1.9453125)
+texture = ExtResource("2_0hol4")
+
+[node name="title-ground" parent="." unique_id=1550567018 instance=ExtResource("3_kdubu")]
+
+[node name="title" type="TileMapLayer" parent="." unique_id=1219060027]
+position = Vector2(0, 6)
+rotation = 1.5707964
+scale = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAAGAP//AAAAAAEAAAAGAP7/AAAAAAEAAAAGAP3/AAAAAAEAAAAGAPz/AAAAAAEAAAAHAPv/AAAAAAAAAAAHAP//AAAAAAAAAAAHAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAPz/AAAAAAAAAAAIAPz/AAABAAEAAAAIAPv/AAABAAEAAAAIAP//AAABAAEAAAAIAP7/AAABAAEAAAAIAP3/AAABAAEAAAAJAP3/AAABAAAAAAAJAPz/AAABAAAAAAAJAPv/AAABAAAAAAAJAP//AAABAAAAAAAJAP7/AAABAAAAAAAFAPj/AAAAAAEAAAAFAPf/AAAAAAEAAAAFAPb/AAAAAAEAAAAGAPj/AAAAAAAAAAAGAPf/AAAAAAAAAAAGAPb/AAAAAAAAAAAGAPn/AAAAAAEAAAAGAPX/AAAAAAAAAAAHAPn/AAAAAAAAAAAHAPX/AAABAAEAAAAHAPj/AAABAAEAAAAHAPf/AAABAAEAAAAHAPb/AAABAAEAAAAIAPn/AAABAAEAAAAIAPX/AAABAAAAAAAIAPj/AAABAAAAAAAIAPf/AAABAAAAAAAIAPb/AAABAAAAAAAJAPn/AAABAAAAAAAJAPX/AAACAAEAAAAJAPb/AAACAAEAAAAJAPj/AAACAAEAAAAJAPf/AAACAAEAAAAIAPr/AAABAAEAAAAJAPr/AAABAAAAAAAGAPv/AAAAAAEAAAAGAPr/AAAAAAEAAAAIAPT/AAABAAAAAAAJAPP/AAACAAEAAAAJAPT/AAACAAEAAAAGAPT/AAAAAAAAAAAHAPT/AAABAAEAAAAFAPT/AAAAAAEAAAAFAPP/AAAAAAEAAAAGAPP/AAAAAAAAAAAHAPP/AAABAAEAAAAIAPP/AAABAAAAAAAFAPX/AAAAAAEAAAAFAPL/AAAAAAAAAAAFAPH/AAAAAAAAAAAFAPD/AAAAAAAAAAAFAO//AAAAAAAAAAAFAO7/AAAAAAAAAAAGAPL/AAABAAEAAAAGAPH/AAABAAEAAAAGAPD/AAABAAEAAAAGAO//AAABAAEAAAAGAO7/AAABAAEAAAAHAPH/AAABAAAAAAAHAPL/AAABAAAAAAAIAPL/AAACAAEAAAAIAPH/AAACAAEAAAAIAPD/AAACAAEAAAAHAPD/AAABAAAAAAAJAPH/AAACAAEAAAAJAPD/AAACAAEAAAAJAPL/AAACAAEAAAAIAO//AAACAAEAAAAHAO//AAABAAAAAAAIAO7/AAACAAEAAAAJAO7/AAACAAEAAAAHAO7/AAABAAAAAAAJAO//AAACAAEAAAAEAPL/AAAAAAEAAAAEAPH/AAAAAAEAAAAEAPD/AAAAAAEAAAAEAO//AAAAAAEAAAAEAO7/AAAAAAEAAAAHAPr/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_4d7sh")
+
+[node name="TitleScreenMusic" type="AudioStreamPlayer2D" parent="." unique_id=1609135220]
+stream = ExtResource("7_d21ai")
+autoplay = true
+
+[node name="3" type="Sprite2D" parent="." unique_id=1522610939]
+show_behind_parent = true
+position = Vector2(573.99994, -0.5)
+scale = Vector2(1.986111, 1.978395)
+texture = ExtResource("8_ir8iy")
+
+[node name="4" type="Sprite2D" parent="3" unique_id=1834348779]
+show_behind_parent = true
+position = Vector2(0.25177002, 164.27458)
+scale = Vector2(1.0008742, 1.0000001)
+texture = ExtResource("9_hqns4")
+
+[node name="2" type="Sprite2D" parent="." unique_id=1823471192]
+show_behind_parent = true
+position = Vector2(575.00006, 100.74999)
+scale = Vector2(1.9930556, 1.7608024)
+texture = ExtResource("10_x0ka3")
+
+[connection signal="pressed" from="NewGameButton" to="NewGameButton" method="_on_pressed"]
