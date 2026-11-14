@@ -4,6 +4,8 @@ var antigravity = preload("res://antigravity.tscn")
 var teleporation = preload("res://teleportation.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if(KillZone.deaths == 3):
+		KillZone.deaths = 0
 	if(KillZone.deaths == 0):
 		normal = normal.instantiate()
 		normal.position = Vector2(-246,153)
@@ -22,6 +24,5 @@ func _ready() -> void:
 		add_child(teleporation)
 		teleporation.collision_layer = 2
 		teleporation.collision_mask = 1
-	if(KillZone.deaths == 3):
-		KillZone.deaths = 0
+
 		# Replace with function body
