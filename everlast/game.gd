@@ -8,19 +8,19 @@ func _ready() -> void:
 		KillZone.deaths = 0
 	if(KillZone.deaths == 0):
 		normal = normal.instantiate()
-		normal.position = Vector2(-246,153)
+		normal.position = Vector2(-233,227)
 		add_child(normal)
 		normal.collision_layer = 2
 		normal.collision_mask = 1
 	if(KillZone.deaths == 1):
 		antigravity = antigravity.instantiate()
-		antigravity.position = Vector2(-246,153)
+		antigravity.position = Vector2(-233,227)
 		add_child(antigravity)
 		antigravity.collision_layer = 2
 		antigravity.collision_mask = 1
 	if(KillZone.deaths == 2):
 		teleporation = teleporation.instantiate()
-		teleporation.position = Vector2(-246,153)
+		teleporation.position = Vector2(-233,227)
 		add_child(teleporation)
 		teleporation.collision_layer = 2
 		teleporation.collision_mask = 1
