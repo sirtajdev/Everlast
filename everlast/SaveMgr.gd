@@ -52,5 +52,9 @@ func new_game():
 		"coins": 0
 	}
 
-	print("Starting a new game!")
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	file.store_string(JSON.stringify(save_data))
+	file.close()
+
+	print("New game created and saved!")
 	return save_data
