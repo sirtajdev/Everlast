@@ -49,17 +49,6 @@ flat = true
 icon_alignment = 1
 script = ExtResource("3_d21ai")
 
-[node name="LoadButton" type="Button" parent="." unique_id=435040961]
-offset_left = 831.0
-offset_top = 171.0
-offset_right = 1162.0
-offset_bottom = 258.0
-theme_override_colors/font_color = Color(0.072842844, 0.072842546, 0.072842605, 1)
-theme_override_fonts/font = ExtResource("1_epypp")
-theme_override_font_sizes/font_size = 48
-text = "Load Game"
-flat = true
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=628299196]
 position = Vector2(574, 325)
 
@@ -86,4 +75,3 @@ theme_override_colors/font_color = Color(0.0142752165, 0.014275218, 0.014275218,
 theme_override_font_sizes/font_size = 87
 
 [connection signal="pressed" from="NewGameButton" to="." method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="LoadButton" to="." method="_on_load_button_pressed"]

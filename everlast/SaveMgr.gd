@@ -56,5 +56,5 @@ func new_game():
 	file.store_string(JSON.stringify(save_data))
 	file.close()
 
-	print("New game created and saved!")
+	print("New game created")
 	return save_data
