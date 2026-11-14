@@ -1,14 +1,14 @@
 [gd_scene format=4 uid="uid://cwg34pfhtbjch"]
 
+[ext_resource type="Script" uid="uid://8rgt7pcp7as5" path="res://game.gd" id="1_jifot"]
 [ext_resource type="Texture2D" uid="uid://dyb6657oq1q6a" path="res://assets/Ground-SS.png" id="1_r40rm"]
-[ext_resource type="PackedScene" uid="uid://bah7i1ommxn2o" path="res://antigravity.tscn" id="2_6q4t8"]
 [ext_resource type="Texture2D" uid="uid://ca8yv6pqhbdyy" path="res://assets/spikess.png" id="2_8tcn8"]
 [ext_resource type="Texture2D" uid="uid://bkioaaahoqi6k" path="res://assets/castle-pixel-art-115630888940qtbur9vvl-Photoroom.png" id="3_rmy57"]
 [ext_resource type="Texture2D" uid="uid://qy1srycklei2" path="res://1.png" id="4_8i3m3"]
 [ext_resource type="Texture2D" uid="uid://kbdwg3p20sst" path="res://2.png" id="5_rmy57"]
 [ext_resource type="Texture2D" uid="uid://cicalqonx0sgq" path="res://3.png" id="6_qulpo"]
 [ext_resource type="Texture2D" uid="uid://mpghvvrjd0b5" path="res://4.png" id="7_jifot"]
-[ext_resource type="Script" uid="uid://2qlvq5v8k1ta" path="res://trampoline.gd" id="9_qulpo"]
+[ext_resource type="PackedScene" uid="uid://cw17pwt0gral4" path="res://killzone.tscn" id="9_qulpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8tcn8"]
 texture = ExtResource("1_r40rm")
@@ -57,11 +57,12 @@ texture = ExtResource("2_8tcn8")
 [sub_resource type="TileSet" id="TileSet_qd1ji"]
 sources/1 = SubResource("TileSetAtlasSource_r6vdu")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_28217"]
-size = Vector2(14659, 1759.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74thi"]
+size = Vector2(16011, 20)
 
 [node name="Node2D" type="Node2D" unique_id=1668333357]
 position = Vector2(307, 162)
+script = ExtResource("1_jifot")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=1756158106]
 position = Vector2(12, 29)
@@ -107,18 +108,20 @@ position = Vector2(6530, 67)
 scale = Vector2(26.413193, 8.253086)
 texture = ExtResource("7_jifot")
 
-[node name="antigravity" parent="." unique_id=1721212661 instance=ExtResource("2_6q4t8")]
-position = Vector2(-233, 227)
+[node name="Killzone" parent="." unique_id=2141632229 instance=ExtResource("9_qulpo")]
+position = Vector2(701, 1556)
+collision_layer = 3
+collision_mask = 3
 
-[node name="Camera2D" type="Camera2D" parent="antigravity" unique_id=1893433540]
-position = Vector2(0.5, 0.125)
-zoom = Vector2(0.8, 0.8)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=729621268]
+position = Vector2(5635.5, 0)
+shape = SubResource("RectangleShape2D_74thi")
 
-[node name="Trampoline" type="Area2D" parent="." unique_id=1375048720]
-position = Vector2(376, 556)
-script = ExtResource("9_qulpo")
+[node name="Killzone2" parent="." unique_id=1505690075 instance=ExtResource("9_qulpo")]
+position = Vector2(881, -1645)
+collision_layer = 3
+collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trampoline" unique_id=1604301728]
-position = Vector2(7113.5, 1538.75)
-shape = SubResource("RectangleShape2D_28217")
-script = ExtResource("9_qulpo")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone2" unique_id=1150092168]
+position = Vector2(5635.5, 0)
+shape = SubResource("RectangleShape2D_74thi")
